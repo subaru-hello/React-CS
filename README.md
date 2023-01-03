@@ -16,6 +16,7 @@ sequenceDiagram
     dotNetCore-->ブラウザ: 天気データをレスポンス
     ブラウザ-->>利用者: 天気データを表示
 ```
+`src/components/FetchData.js` ：FetchDataページ用のコンポーネント。ASP.NET Core Web API側からデータを取得して、その内容を画面に表示する
 
 ### 構成
 - ASP.NET Core 7.0
