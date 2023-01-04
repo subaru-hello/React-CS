@@ -1,4 +1,4 @@
-import React, { Component, FC, PropsWithChildren } from "react";
+import { FC, PropsWithChildren } from "react";
 import { Container } from "reactstrap";
 import { NavMenu } from "./NavMenu";
 
