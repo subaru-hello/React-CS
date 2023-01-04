@@ -108,7 +108,7 @@ export const Todo = () => {
 
   return (
     <div>
-      <h1>Todoリスト</h1>
+      <h1>Todo</h1>
       <input type="text" onChange={handleChangeInput} value={text} />
       <button onClick={handleAdd}>追加</button>
       <ul>
