@@ -1,9 +1,9 @@
 URL
 https://reactcs.azurewebsites.net/
 ホスト: Microsoft Azure
-# React-TODO
-ASP.NET Core Web API側からデータを取得して、その内容をブラウザに表示する流れを理解するためのWeb App
-
+### 作成意図
+- ASP.NET Core Web API側からデータを取得して、その内容をブラウザに表示する流れを理解するために作成しました。
+- 静的型付け言語の学習を通してruby(動的型付け言語)の理解を深めるためにC#を触りました。
 ### 流れ
 
 ```mermaid
