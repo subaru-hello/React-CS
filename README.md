@@ -1,3 +1,6 @@
+URL
+https://reactcs.azurewebsites.net/
+ホスト: Microsoft Azure
 # React-TODO
 ASP.NET Core Web API側からデータを取得して、その内容をブラウザに表示する流れを理解するためのWeb App
 
