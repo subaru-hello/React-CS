@@ -1,4 +1,5 @@
 import  Counter  from "./components/Counter";
+import { Todo } from "./components/Todo";
 import { Home } from "./components/Home";
 
 const AppRoutes = [
@@ -9,6 +10,10 @@ const AppRoutes = [
   {
     path: '/counter',
     element: <Counter />
+  },
+  {
+    path: '/todo',
+    element: <Todo />
   }
 ];
 
