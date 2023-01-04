@@ -1,5 +1,5 @@
 import  Counter  from "./components/Counter";
-import { Todo } from "./components/Todo";
+import { Todo } from "./components/todos/Todo";
 import { Home } from "./components/Home";
 
 const AppRoutes = [

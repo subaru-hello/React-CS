@@ -1,8 +1,10 @@
 import { ChangeEvent, useEffect, useState } from "react";
+import { TodoList } from "./TodoList";
+import { TodoInput } from "./TodoInput";
 import axios from "axios";
 
 // TodoItemの型宣言
-type TodoItem = {
+export type TodoItem = {
   id?: number;
   name: string;
   isComplete: boolean;
@@ -109,31 +111,12 @@ export const Todo = () => {
   return (
     <div>
       <h1>Todo</h1>
-      <input type="text" onChange={handleChangeInput} value={text} />
-      <button onClick={handleAdd}>追加</button>
-      <ul>
-        {/* todoアイテムの配列を展開 */}
-        {todos.map((todo) => (
-          <li key={todo.id}>
-            <input
-              type="checkbox"
-              checked={todo.isComplete}
-              onChange={() => {
-                handleChangeStatus(todo.id);
-              }}
-            />
-            {/* 完了フラグがtrueの場合は取り消し線を表示 */}
-            {todo.isComplete ? (
-              <span style={{ textDecorationLine: "line-through" }}>
-                {todo.name}
-              </span>
-            ) : (
-              <span>{todo.name}</span>
-            )}
-            <button onClick={() => handleDelete(todo.id)}>削除</button>
-          </li>
-        ))}
-      </ul>
+      <TodoInput text={text} onChange={handleChangeInput} onClick={handleAdd} />
+      <TodoList
+        todos={todos}
+        onChange={handleChangeStatus}
+        onClick={handleDelete}
+      />
     </div>
   );
 };
