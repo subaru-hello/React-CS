@@ -1,4 +1,6 @@
 import { ChangeEvent } from "react";
+import { Fab, Stack, TextField } from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
 
 type Props = {
   text: string;
@@ -8,9 +10,17 @@ type Props = {
 
 export const TodoInput = ({ text, onChange, onClick }: Props) => {
   return (
-    <>
-      <input type="text" onChange={onChange} value={text} />
-      <button onClick={onClick}>追加</button>
-    </>
+    <Stack direction="row" spacing={2}>
+      <TextField
+        sx={{ width: "100%", marginBottom: 2 }}
+        size="small"
+        variant="outlined"
+        onChange={onChange}
+        value={text}
+      />
+      <Fab size="small" color="primary" onClick={onClick}>
+        <AddIcon />
+      </Fab>
+    </Stack>
   );
 };

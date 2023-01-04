@@ -1,4 +1,5 @@
 import { ChangeEvent, useEffect, useState } from "react";
+import { Container } from "@mui/material";
 import { TodoList } from "./TodoList";
 import { TodoInput } from "./TodoInput";
 import axios from "axios";
@@ -109,7 +110,7 @@ export const Todo = () => {
   }, []);
 
   return (
-    <div>
+    <Container maxWidth="sm">
       <h1>Todo</h1>
       <TodoInput text={text} onChange={handleChangeInput} onClick={handleAdd} />
       <TodoList
@@ -117,6 +118,6 @@ export const Todo = () => {
         onChange={handleChangeStatus}
         onClick={handleDelete}
       />
-    </div>
+    </Container>
   );
 };
